@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE  bibliotheque SYSTEM "./bibliotheque.dtd">
-<?xml-model href="./bibliotheque.rnc"?>
+<!DOCTYPE  bibliotheque SYSTEM "./IFT3225_El-Masri_Daniel_TP1.dtd">
+<?xml-model href="./IFT3225_El-Masri_Daniel_TP1.rnc"?>
 <bibliotheque xmlns="bibliotheque">
     <adresse>
         <numero>2920</numero>
