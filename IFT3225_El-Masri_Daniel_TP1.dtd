@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!ELEMENT bibliotheque ( 
+                   (livres, ( (auteurs,adresse)
+                            | (adresse,auteurs)))
+                 | (auteurs, ( (livres,adresse)
+                            | (adresse,livres)))
+                 | (adresse, ( (livres,auteurs)
+                            | (auteurs,livres)))
+                 ) >
+
+<!ELEMENT livres (livre+) >
+<!ELEMENT auteurs (auteur+)> 
+<!ELEMENT adresse (numero, rue, ville, cp)>
+
+<!ELEMENT livre (titre, annee, prix, ((couverture?, commentaire?) | (commentaire?, couverture?))) >
+<!ATTLIST livre langue CDATA #REQUIRED >
+<!ATTLIST livre auteurs IDREFS #REQUIRED >
+<!ELEMENT titre (#PCDATA) >
+<!ELEMENT annee (#PCDATA) >
+<!ELEMENT prix (#PCDATA) >
+<!ATTLIST prix devise (BTC | USD | CAD | EURO | GBP) #IMPLIED >
+<!ELEMENT couverture EMPTY >
+<!ATTLIST couverture url CDATA #REQUIRED >
+
+<!ELEMENT auteur (nom, prenom, ( 
+                   (adresse, ( (commentaire?,email)
+                            | (email,commentaire?)))
+                 | (commentaire?, ( (adresse,email)
+                            | (email,adresse)))
+                 | (email, ( (adresse,commentaire?)
+                            | (commentaire?,adresse)))
+                 )) >
+<!ATTLIST auteur ident ID #REQUIRED >
+<!ELEMENT nom (#PCDATA)>
+<!ELEMENT prenom (#PCDATA)>
+<!ELEMENT email (#PCDATA)>
+<!ELEMENT commentaire (#PCDATA)>
+
+<!ELEMENT numero (#PCDATA) >
+<!ELEMENT rue (#PCDATA) >
+<!ELEMENT ville (#PCDATA) >
+<!ELEMENT cp (#PCDATA) >
+
+
+
+
+
+
+

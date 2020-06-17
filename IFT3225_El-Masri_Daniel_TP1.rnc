@@ -1,0 +1,69 @@
+default namespace = "bibliotheque"
+
+datatypes xs = "http://www.w3.org/2001/XMLSchema-datatypes"
+
+start = bibliotheque
+
+bibliotheque = element bibliotheque {(auteurs, livres, adresse) | (auteurs, adresse, livres)
+                                        | (livres, auteurs, adresse) | (livres, adresse, auteurs)
+                                           | (adresse, livres, auteurs) | (adresse, auteurs, livres)}
+
+adresse = element adresse {
+            element numero {xs:integer},
+            element rue {text},
+            element ville {text},
+            element cp {postalCodePattern} 
+}
+
+livres = element livres {
+            livre+
+}
+
+auteurs = element auteurs {
+            auteur+
+}
+
+# Pour s'assurer que le format du code postal est valide, nous utilisons un pattern de text specifique
+# https://www.iro.umontreal.ca/~lapalme/ForestInsteadOfTheTrees/HTML/ch03s03.html
+postalCodePattern = xs:string {pattern="[A-Z][0-9][A-Z] [0-9][A-Z][0-9]"}
+validEmailPattern = xs:string {pattern="([\w\-\.])+@([\w\-]+\.)+[\w\-]{2,4}"}
+
+auteur = element auteur {
+            attribute ident {xs:ID},
+            element nom {text},
+            element prenom {text},
+             ((adresse, ( (commentaire?,email)
+                            | (email,commentaire?)))
+                 | (commentaire?, ( (adresse,email)
+                            | (email,adresse)))
+                 | (email, ( (adresse,commentaire?)
+                            | (commentaire?,adresse))))
+}
+
+email = element email {validEmailPattern}
+commentaire = element commentaire {text}
+couverture = element couverture {
+               attribute url {xs:anyURI}
+}
+
+prix = element prix {
+          attribute devise {(currencyTypes)}?,
+          xs:decimal {
+            minInclusive="0"
+            maxInclusive="100"
+         }
+}
+currencyTypes =  "BTC" | "USD" | "CAD" | "EURO" | "GBP"
+
+livre = element livre {
+        attribute langue {xs:language},
+        attribute auteurs {xs:IDREFS},
+        element titre {xs:string {maxLength = "60"}},
+        element annee {xs:gYear},
+        prix,
+       ((couverture?, commentaire?) | (commentaire?, couverture?))
+}
+        
+
+
+       

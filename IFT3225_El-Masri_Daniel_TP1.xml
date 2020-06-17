@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE  bibliotheque SYSTEM "./bibliotheque.dtd">
+<?xml-model href="./bibliotheque.rnc"?>
+<bibliotheque xmlns="bibliotheque">
+    <adresse>
+        <numero>2920</numero>
+        <rue>ch. de la Tour</rue>
+        <ville>Montreal</ville>
+        <cp>H3T 1N8</cp>
+    </adresse>
+    <auteurs>  
+    <auteur ident="h5p_pfb_bmb">
+        <nom>Hemingway</nom>
+        <prenom>Ernest</prenom>
+        <adresse>
+            <numero>1899</numero>
+            <rue>Oak Park</rue>
+            <ville>Illinois</ville>
+            <cp>A1B 3C3</cp>
+        </adresse>
+        <commentaire>Ernest Miller Hemingway was an American journalist, novelist, short-story writer, and sportsman. 
+                     His economical and understated style—which he termed the iceberg theory—had a strong influence on 20th-century fiction, 
+                     while his adventurous lifestyle and his public image brought him admiration from later generations </commentaire>
+        <email>e-hemingway@testing.com</email>
+    </auteur>
+    <auteur ident="qdh_qfb_bmb">
+        <nom>Bradbury</nom>
+        <prenom>Ray</prenom>
+        <adresse>
+            <numero>1812</numero>
+            <rue>Landport</rue>
+            <ville>Portsmouth</ville>
+            <cp>A2B 3C4</cp>
+        </adresse>
+        <email>dickens.charles@testing.com</email>
+    </auteur>
+    <auteur ident="ffv_qfb_bmb">
+        <nom>Shelley</nom>
+        <prenom>Mary</prenom>
+        <email>mary.shelley-email@testing.com</email>
+        <adresse>
+            <numero>1797</numero>
+            <rue>Somers</rue>
+            <ville>London</ville>
+            <cp>A3B 4C5</cp>
+        </adresse>
+    </auteur>
+      <auteur ident="y5y_qfb_bmb">
+          <nom>Martin</nom>
+          <prenom>George</prenom>
+          <email>grrm@testing.com</email>
+          <commentaire> George Raymond Richard Martin, also known as GRRM, is an American novelist and short story writer in 
+                        the fantasy, horror, and science fiction genres, screenwriter, and television producer. 
+                        He wrote the series of epic fantasy novels A Song of Ice and Fire, which was adapted into the HBO series Game of Thrones
+          </commentaire>
+          <adresse>
+              <numero>1948</numero>
+              <rue>Bayonne</rue>
+              <ville>New Jersey</ville>
+              <cp>A4B 5C6</cp>
+          </adresse>
+      </auteur>      
+  </auteurs> 
+  <livres> 
+      <livre langue="ang" auteurs="y5y_qfb_bmb">
+        <titre>A Game of Thrones</titre>
+        <annee>1996</annee>
+        <prix devise="BTC"> 0.0016 </prix>
+        <couverture url="https://images-na.ssl-images-amazon.com/images/I/A12tbaSby+L.jpg"/>
+        <commentaire>
+            A Game of Thrones is the first novel in A Song of Ice and Fire, a series of fantasy novels by the American author 
+            George R. R. Martin. It was first published on August 1, 1996. The novel won the 1997 Locus Award and was nominated 
+            for both the 1997 Nebula Award and the 1997 World Fantasy Award.
+        </commentaire>
+    </livre>
+      <livre langue="anglais" auteurs="qdh_qfb_bmb">
+        <titre>Fahrenheit 451</titre>
+        <annee>1953</annee>
+        <prix devise="USD"> 16.35 </prix>
+        <commentaire>
+            Fahrenheit 451 is a dystopian novel by American writer Ray Bradbury, first published in 1953. 
+            Often regarded as one of his best works, the novel presents a future American society where books are outlawed and 
+            "firemen" burn any that are found.
+        </commentaire>
+        <couverture url="https://images-na.ssl-images-amazon.com/images/I/71ub2nWheJL.jpg"/>
+    </livre>
+      <livre langue="anglais" auteurs="ffv_qfb_bmb">
+        <titre>Frankenstein</titre>
+        <annee>1818</annee>
+        <prix> 15.00 </prix>
+        <commentaire>
+            Frankenstein; or, The Modern Prometheus is an 1818 novel written by English author Mary Shelley that tells the 
+            story of Victor Frankenstein, a young scientist who creates a hideous sapient 
+            creature in an unorthodox scientific experiment
+        </commentaire>
+    </livre>
+      <livre langue="francais" auteurs="h5p_pfb_bmb">
+        <titre>A Farewell To Arms</titre>
+        <annee>1929</annee>
+        <prix devise="CAD"> 22.95 </prix>
+          <couverture url="https://pictures.abebooks.com/SUNALSORISES/md/md30625927708.jpg"/>
+    </livre>
+  </livres> 
+</bibliotheque>

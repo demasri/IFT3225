@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>IFT3225 El-Masri TP1</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous"/>
+        <link rel="stylesheet" type="text/css" href="./IFT3225_El-Masri_Daniel_TP1.css"/>
+    </head>
+    <body>
+        <!-- https://getbootstrap.com/docs/4.0/layout/grid/ ==> Pour savoir comment organiser les divs-->
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-3 well">
+                    <!-- Pour organiser le navbar ==> https://getbootstrap.com/docs/4.0/components/navs/-->
+                    <ul class="nav flex-column nav-pills" role="tablist" aria-orientation="vertical">
+                        <li>
+                            <h2>Some Favorites</h2>
+                        </li>
+                        <li>
+                            <a class="nav-link active" id="v-pills-celery-tab" data-toggle="pill" href="#v-pills-celery" role="tab" aria-controls="v-pills-celery-tab" aria-selected="true">Celery Roots</a>
+                        </li>
+                        <li>
+                            <a class="nav-link" id="v-pills-spaghetti-tab" data-toggle="pill" href="#v-pills-spaghetti" role="tab" aria-controls="v-pills-spaghetti-tab" aria-selected="false">Spaghetti Squash</a>
+                        </li>
+                        <li>
+                            <a class="nav-link" id="v-pills-mushroom-tab" data-toggle="pill" href="#v-pills-mushroom" role="tab" aria-controls="v-pills-mushroom-tab" aria-selected="false">Killer Mushrooms</a>
+                        </li>
+                    </ul>
+                    <form>
+                        <div class="form-group">
+                            <input type="text" class="col-lg-12"/>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary">Search Recipes</button>
+                        </div>
+                    </form>
+                </div>
+                <!-- Pour afficher l'alerte ==> https://getbootstrap.com/docs/4.0/components/alerts/-->
+                <div class="col-md-9">
+                    <div class="alert bg-danger">
+                        <b>Uh oh!</b> Have you had your daily dose of veggies today??
+                    </div>
+                    <h1>Wild &amp; Wacky Vegetables</h1>
+                    <div class="informationBlock">
+                        <p>The beet is the most intense of vegetables. The radish, admittedly, is more feverish, but the fire of the radish is a cold fire, the fire of discontent not of passion. Tomatoes are lusty enough, yet there runs through tomatoes an undercurrent of frivolity. Beets are deadly serious.</p>
+                        <p>Tom Robbins</p>
+                    </div>
+                <h2>Some diseases</h2>
+                <!-- Pour organise la table de maladies ==> https://getbootstrap.com/docs/4.4/content/tables/-->
+                <table class="table table-striped table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Veggie</th>
+                            <th>Disease</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Beets</td>
+                            <td>Beeturia</td>
+                        </tr>
+                        <tr>
+                            <td>Carrots</td>
+                            <td>Carotenosis</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="row">
+                    <div class="col-6 col-sm-6 col-lg-4">
+                        <div class="card">
+                            <img class="card-img-top" src="https://lh3.googleusercontent.com/proxy/yiLJY_4B3Hz_tWp4mq_II9yoSdmPe0u6tgijkMCpxQ1FEMwz1bW8Micg_jaVg8s5xy56YTBqnGIrWdvp3yhiTUALk365zqlp3JGgXdN62VqW_v2X1_XWrok16uBL6CvLsLLwo4ACEGl6N-sNgg" alt="Picture of Beets"/>
+                            <div class="card-body">
+                            <h4 class="card-title">Beets</h4>
+                            <p class="card-text" style="color: black;">Careful not to get your hands dirty.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-sm-6 col-lg-4">
+                        <div class="card">
+                            <img class="card-img-top" src="https://www.almanac.com/sites/default/files/image_nodes/carrots-table_popidar-ss.jpg" alt="Picture of Beets"/>
+                            <div class="card-body">
+                            <h4 class="card-title">Carrots</h4>
+                            <p class="card-text" style="color: black;">Not sticks, can motivate.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-sm-6 col-lg-4">
+                        <div class="card">
+                            <img class="card-img-top" src="https://edge.bonnieplants.com/www/uploads/20181011003331/BONNIE-PLANTS_asparagus-iStock-852115480-2400px.jpg" alt="Picture of Aspagus"/>
+                            <div class="card-body">
+                            <h4 class="card-title">Asparagus</h4>
+                            <p class="card-text" style="color: black;">Spears, spears, spears.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
