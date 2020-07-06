@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<!-- Auteur: Daniel El-Masri (20096261) -->
+<!-- Travail Pratique 1 - 18 Juin 2020 12:00 -->
+
 <!ELEMENT bibliotheque ( 
                    (livres, ( (auteurs,adresse)
                             | (adresse,auteurs)))

@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Auteur: Daniel El-Masri (20096261) -->
+<!-- Travail Pratique 1 - 18 Juin 2020 12:00 -->
+
 <!DOCTYPE  bibliotheque SYSTEM "./IFT3225_El-Masri_Daniel_TP1.dtd">
 <?xml-model href="./IFT3225_El-Masri_Daniel_TP1.rnc"?>
 <bibliotheque xmlns="bibliotheque">

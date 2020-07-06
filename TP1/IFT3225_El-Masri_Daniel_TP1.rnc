@@ -1,3 +1,6 @@
+# Auteur: Daniel El-Masri (20096261)
+# Travail Pratique 1 - 18 Juin 2020 12:00
+
 default namespace = "bibliotheque"
 
 datatypes xs = "http://www.w3.org/2001/XMLSchema-datatypes"
