@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<bibliotheque>
+    <livres>
+        <livre langue="Anglais" auteurs="M001">
+            <titre>The Chemist</titre>
+            <annee>2016</annee>
+            <prix>19.93</prix>
+            <couverture>https://images-na.ssl-images-amazon.com/images/I/51Td6uTiRDL._SY346_.jpg</couverture>
+        </livre>
+        <livre langue="Anglais" auteurs="R002">
+            <titre>Harry Potter and the Philosopher's Stone </titre>
+            <annee>1997</annee>
+            <prix devise="CAD">14.99</prix>
+            <couverture>https://www.renaud-bray.com/ImagesEditeurs/PG/1803/1803444-gf.jpg</couverture>
+        </livre>
+    </livres>
+    <auteurs>
+        <auteur ident="B001">
+           <nom>Bottero</nom>
+           <prenom>Pierre</prenom>
+           <pays>France</pays>
+           <photo>https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Pierre_Bottero_20080315_Salon_du_livre_1.jpg/220px-Pierre_Bottero_20080315_Salon_du_livre_1.jpg</photo>
+       </auteur>
+       <auteur ident="R001">
+           <prenom>Patrick</prenom>
+           <nom>Rothfuss</nom>
+           <pays>Etats-Unis</pays>
+           <commentaire>
+               Ça lui a pris 15 ans pour écrire sa première nouvelle. 
+           </commentaire>
+           <photo>http://i3.ytimg.com/vi/3v9W6keB-q8/maxresdefault.jpg</photo>
+       </auteur>
+       <auteur ident="R002">
+           <nom>Rowling</nom>
+           <prenom>Joanne</prenom>
+           <pays>Royaume-Uni</pays>
+           <commentaire>Utilise le nom "J.K Rowling"</commentaire>
+           <photo>http://www.jkrowling.com/wp-content/uploads/2019/01/JKRowling_Shot_D_029_V3_lower-300x170.jpg</photo>
+       </auteur>
+       <auteur ident="G001">
+           <prenom>Christie</prenom>
+           <nom>Golden</nom>
+           <pays>Etats-Unis</pays>
+           <photo>https://vignette.wikia.nocookie.net/starcraft/images/3/3d/ChristieGolden_Real1.png/revision/latest?cb=20160325045448</photo>
+       </auteur>
+       <auteur ident="M001" >
+           <nom>Meyer</nom>
+           <prenom>Stephanie</prenom>
+           <pays>Etats-Unis</pays>
+           <photo>https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Stephenie_Meyer_by_Gage_Skidmore.jpg/220px-Stephenie_Meyer_by_Gage_Skidmore.jpg</photo>
+       </auteur>
+       <auteur ident="L001">
+           <prenom>Joshua
+           </prenom>
+           <nom>Lewis</nom>
+           <pays>Etats-Unis</pays>
+           <photo>https://vignette.wikia.nocookie.net/mortalinstruments/images/9/96/Joshue_Lewis.png/revision/latest?cb=20140911085234</photo>
+       </auteur>
+       <auteur ident="C001">
+           <prenom>Cassandra</prenom>
+           <nom>Clare</nom>
+           <pays>Etats-Unis</pays>
+           <photo>https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwH1hSzYhR4GIuzAAgomnOzg3weAoaZEv3PY76cwGZIY72vt3f</photo>
+       </auteur>
+       <auteur ident="M002">
+           <prenom>George</prenom>
+           <nom>Martin</nom>
+           <pays>Etats-Unis</pays>
+           <commentaire>Plus connu pour sa série Game of Thrones.</commentaire>
+           <photo>https://cnet2.cbsistatic.com/img/wSoVepCs86BTbRzr-Ym9Wd0T7iY=/1092x0/2019/05/14/ee80f152-2110-4083-86d5-950603a9f201/gettyimages-1035092140.jpg</photo>
+       </auteur>
+       <auteur ident="A001">
+           <prenom>Margaret</prenom>
+           <nom>Atwood</nom>
+           <pays>Canada</pays>
+           <photo>https://www.nationalobserver.com/sites/nationalobserver.com/files/styles/nat_header_full_size/public/img/2015/06/07/margaret-atwood-author-photograph-for-publicity-rights-cleared-c-jean-malek-01.jpg?itok=BSCFLziI</photo>
+       </auteur>
+    </auteurs>
+    <livres>
+        <livre langue="Francais" auteurs="B001">
+            <titre>Le pacte des marchombres</titre>
+            <annee>2008</annee>
+            <prix>16.95</prix>
+            <couverture>https://www.renaud-bray.com/ImagesEditeurs/PG/1074/1074830-gf.jpg</couverture>
+            <commentaire>Premier livre d'une trilogie qui prend place dans le monde d'Ewilan.</commentaire>
+        </livre>
+        <livre langue="Anglais" auteurs="L001 C001">
+            <titre>The Shadowhunter's Code</titre>
+            <annee>2013</annee>
+            <prix>29.99</prix>
+        </livre>
+        <livre langue="Anglais" auteurs="R002">
+            <titre>The Casual Vacancy</titre>
+            <annee>2017</annee>
+            <prix>11.00</prix>
+            <couverture>https://www.renaud-bray.com/ImagesEditeurs/PG/1576/1576640-gf.jpg</couverture>
+        </livre>
+        <livre langue="Francais" auteurs="B001">
+            <titre>L'autre</titre>
+            <annee>2006</annee>
+            <prix>12.99</prix>
+        </livre>
+        <livre langue="Anglais" auteurs="R001">
+            <titre>The name of the Wind</titre>
+            <annee>2007</annee>
+            <prix devise="CAD">14.99</prix>
+            <commentaire>Premier livre d'une trilogie.</commentaire>
+        </livre>
+        <livre langue="Anglais" auteurs="M001">
+            <titre>New Moon</titre>
+            <annee>2006</annee>
+            <prix devise="CAD">22.49</prix>
+            <couverture>https://www.renaud-bray.com/ImagesEditeurs/PG/962/962880-gf.jpg</couverture>
+        </livre> 
+        <livre langue="Anglais" auteurs="M002"> 
+            <titre>A Game of Thrones</titre>
+            <annee>1996</annee>
+            <prix>13.50</prix>
+            <couverture>https://www.renaud-bray.com/ImagesEditeurs/PG/365/365779-gf.jpg</couverture>
+        </livre>
+        <livre langue="Anglais" auteurs="M002">
+            <titre>The hero</titre>
+            <annee>1971</annee>
+            <prix devise="USD">9.99</prix>
+        </livre>
+    </livres>
+</bibliotheque>
