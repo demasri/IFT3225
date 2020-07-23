@@ -1,0 +1,28 @@
+#sudokuTable {
+    position: relative;
+    padding-top: 20px;
+    padding-left: 35%;
+}
+
+.illegalMove {
+    background-color: red;
+}
+
+
+#title, #options, #generation, #errorCounter {
+    text-align: center;
+    color: aliceblue;
+}
+
+#generation {
+    padding: 10px;
+}
+
+#errorCounter {
+    text-align: center;
+    font-weight: bold;
+}
+
+body {
+    background-color: #333333;
+}

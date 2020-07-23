@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>IFT3225 El-Masri Daniel TP2</title>
+        <link rel="stylesheet" type="text/css" href="./IFT3225_El-Masri_Daniel_TP2.css"/>
+        <script src="./IFT3225_El-Masri_Daniel_TP2.js"></script>
+        
+    </head>
+    <body>
+        <div>
+            <div id="title">
+                <h1 id="mainTitle">Daniel's Sudoku Website</h1>
+            </div>
+            <div id="options">
+                <h3>Please select the desired size: </h3>
+                <p>By default values are 9x9</p>
+                <button class="sizeButton" id="2" >2</button>
+                <button class="sizeButton" id="4">4</button>
+                <button class="sizeButton" id="6">6</button>
+                <button class="sizeButton" id="8">8</button>
+                <button class="sizeButton" id="9">9</button>
+            </div>
+            <div id="generation">
+                <button id="generateBoard">Generate sudoku</button>
+            </div>
+            <div id="sudokuTable">
+            </div>    
+            <div id="errorCounter">
+                <p>Number of errors made: </p><p id="errors"></p>
+                <p>Time taken: </p><time id="timer">00:00:00</time>
+            </div>   
+        </div>
+    </body>
+</html>

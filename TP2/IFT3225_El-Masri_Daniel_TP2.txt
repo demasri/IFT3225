@@ -1,0 +1,5 @@
+Auteur: Daniel El-Masri
+IFT3225 - Travail Pratique 2
+12 Juillet 2020
+
+lien vers l'exercice 1 sur le serveur du DIRO: http://www-ens.iro.umontreal.ca/~elmasrid/ift3225/

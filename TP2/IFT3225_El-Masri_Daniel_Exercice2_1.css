@@ -1,0 +1,14 @@
+img {
+    max-width: 500px;
+    max-height: 500px;
+}
+
+.card {
+    display: inline;
+}
+
+hr {
+    border: none;
+    background-color: black;
+    height: 5px;
+}
