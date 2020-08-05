@@ -1,0 +1,12 @@
+An electric cella, colloquially known as cell1, is an electrochemical device that converts chemical energy into electrical energy through a chemical oxidation-reduction reaction.
+
+
+The term “battery” designates an assembly of identical elements (in parallel or in series), unlike the battery which designates the stacking of torque (different metals + insulator) in order to obtain the desired voltage (we can then put their battery cells to obtain the desired characteristics). If the elements assembled together are accumulators they form an accumulator battery
+But sometimes we find the expression for a battery of cells, to describe the assembly of these components.
+
+In the automotive industry, the term an “accumulator battery” is often simplified to “battery”, which is incomplete.
+
+There are archaeological objects, like those found in 1936, resembling piles. This is the case of the Baghdad electric battery which is dated between −250 and 250 although they could be older and would explain the so perfect plating of many ancient jewelry so light.
+A lithium-ion battery, or lithium-ion accumulator, is a type of lithium battery.
+
+Its main advantages are a high specific energy (two to five times more than nickel metal hydride for example) as well as the absence of memory effect. Finally, the self-discharge is relatively low compared to other accumulators. However, the cost remains high and has long confined lithium to small systems

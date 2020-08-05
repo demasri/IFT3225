@@ -1,17 +1,23 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+/***
+ * Auteur : Daniel El-Masri
+ * Date : 29 Juillet 2020
+ * IFT3225 - TP3 : Exercice 1
+ *
+ * Les ressources utilisee pour coder sont specifier ci-dessous:
+ *
+ * - https://reactjs.org/tutorial/tutorial.html#what-are-we-building
+ * - https://www.techighness.com/post/develop-two-player-chess-game-with-react-js/
+ *
+ */
+
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import Game from "./components/game";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Game />
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById("root")
 );
-
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();

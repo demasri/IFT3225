@@ -1,0 +1,10 @@
+An electric car is an automobile powered by one or more electric motors, generally powered by an accumulator battery or even a hydrogen cell.
+
+Among the models in each of these sectors, we can cite the Tesla Model 3 and the Renault Zoe equipped with batteries, the Toyota Mirai equipped with a fuel cell, or the Chevrolet Volt equipped with a range extender which makes it a plug-in hybrid electric vehicle.
+
+The concept of electric car corresponds to the concept of electric vehicle in the field of the car. The electric vehicle essentially comprises a battery system which acts as fuel as well as an electric motor. It differs from the thermal vehicle by a longer recharging time, as well as by the ease of transporting and distributing electricity, compared to a thermal vehicle.
+
+The car is generally equipped with one or more electric motors, the total power of which can range from 15 to more than 400 kW, depending on the size of the vehicle, the use and the desired performance.
+In most cases, an accumulator battery, sometimes a fuel cell or other source of electrical energy, supplies the engine with energy. The accumulator batteries are themselves recharged either by cable from an external electrical source; either by recovery of energy during movement thanks to regenerative braking, for electric cars or electric hybrids, the engine then functioning as an electricity generator; or by one or the other, for plug-in hybrid vehicles.
+
+The cost of the battery, higher than that of a gasoline tank for the same range, represents a significant part of the cost of the vehicle. On the other hand, the motor transmission system of an electric vehicle is much simpler to build and to maintain than that of a vehicle with a heat engine of the same power. In addition, recharging can be more economical, at the same mileage, in countries where electricity is not itself mainly produced from fossil fuels.

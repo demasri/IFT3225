@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <link rel="icon" href="./images/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
     <meta
@@ -24,9 +24,28 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>React App</title>
+
+    <link rel="stylesheet" type="text/css" href="./src/index.css" />
+
+    <script
+      crossorigin
+      src="http://www-ens.iro.umontreal.ca/~levestev/exemples/react/scripts/react.production.min.js"
+    ></script>
+    <script
+      crossorigin
+      src="http://www-ens.iro.umontreal.ca/~levestev/exemples/react/scripts/react-dom.production.min.js"
+    ></script>
+    <script
+      src="http://www-ens.iro.umontreal.ca/~levestev/exemples/react/scripts/babel.min.js"
+      charset="utf-8"
+    ></script>
+
+    <script type="module" src="./src/index.js"></script>
+
+    <title>IFT3225_El-Masri_Daniel_TP3_Exercice1</title>
   </head>
   <body>
+    <h2>Daniel's Online Chess</h2>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     <!--
