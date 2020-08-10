@@ -16,7 +16,11 @@ import os
 import pprint
 import re
 import nltk
+import operator
 import gensim.models.word2vec as w2v
+import pandas as pd
+from sklearn.feature_extraction.text import TfidfVectorizer
+from stemming.porter2 import stem
 
 # Download de fonctions de tokenization et de filtrage de mots d'arret de la librairie nltk
 nltk.download('punkt')
@@ -26,15 +30,32 @@ nltk.download('stopwords')
 documents = sorted(glob.glob("../documents_ift/*.txt"))
 print(documents)
 
+
+def clean(str):
+    # result = ""
+    # unsupported_chars = ['.', ',', '-', '<',
+    #                      '>', '"', ':', ";", '[', ']', '(', ')']
+    # for i in str:
+    #     if i in unsupported_chars:
+    #         result += ' '
+    #     else:
+    #         result += i
+    # return result
+    return re.sub("[^a-zA-Z]", " ", str)
+
+
 # Combinaison de tout le text dans un string --> Il est preferable d'avoir tout le texte des documents dans un seul ensemble
 text_collection = u""
 for document in documents:
     print("Lecture de " + document + "....")
     # On utilise la librairie codecs pour formatter le texte des documents en format utf-8
     with codecs.open(document, "r", "utf-8") as document_text:
+        for line in document_text:
+            print('YYY: ' + clean(line))
         text_collection += document_text.read()
         print("La collection de mots contient " +
               str(len(text_collection)) + " caracteres....\n")
+
 
 # Separation de l'ensemble de text en phrase --> Transforme les mots en tokens, et dans notre cas les tokens seront des phrases
 tokenizer = nltk.data.load('tokenizers/punkt/english.pickle')
@@ -61,53 +82,94 @@ nbr_of_tokens = sum([len(phrase) for phrase in phrases])
 print("La colletion de texte contient " + str(nbr_of_tokens) + " tokens\n")
 
 print(raw_phrases[0])
+print(phrases[0])
 print(phrases_to_wordlist(raw_phrases[0]))
 
-# ================================================================================
-# Initialisation de word2vec & Generation du model
-# ================================================================================
+stem_tokens = [[stem(word) for word in phrase] for phrase in phrases]
 
-# Dimension des vecteur termes resultants
-num_feature = 300
+# Tableau de tableau contenant  les mots reduits de chaque phrases
+# print(raw_phrases)
 
-# Nombre minimum d'instance d'un mot
-min_word_count = 3
 
-# Nombre de threads pour l'execution en parallel (+ de threads <-> + rapide)
-num_threads = multiprocessing.cpu_count()
+# # ================================================================================
+# # Initialisation de word2vec & Generation du model
+# # ================================================================================
 
-# ...
-context_size = 7
+# # Dimension des vecteur termes resultants
+# num_feature = 300
 
-# Permet de limiter la frequence de fois que le model regardera des mots deja vu (puisque si il est deja vu il est deja dans le model...)
-down_sampling = 1e-3
+# # Nombre minimum d'instance d'un mot
+# min_word_count = 3
 
-# Generation de nombre aleatoire --> pour choisir un mot aleatoire dans une partie de texte.
-seed = 1
+# # Nombre de threads pour l'execution en parallel (+ de threads <-> + rapide)
+# num_threads = multiprocessing.cpu_count()
 
-# Entrainement de notre model
-documents2vec = w2v.Word2Vec(
-    sg=1,
-    seed=seed,
-    workers=num_threads,
-    size=num_feature,
-    min_count=min_word_count,
-    window=context_size,
-    sample=down_sampling
-)
+# # ...
+# context_size = 7
 
-# Generation de la liste de vocabulaire
-documents2vec.build_vocab(phrases)
+# # Permet de limiter la frequence de fois que le model regardera des mots deja vu (puisque si il est deja vu il est deja dans le model...)
+# down_sampling = 1e-3
 
-print("Word2Vec vocab list length: " + str(len(documents2vec.wv.vocab)))
+# # Generation de nombre aleatoire --> pour choisir un mot aleatoire dans une partie de texte.
+# seed = 1
 
-# Entrainement du model en suivant la documentation de word2vec (en entete de main.py)
-documents2vec.train(phrases, total_examples=1, epochs=1)
+# # Entrainement de notre model
+# documents2vec = w2v.Word2Vec(
+#     sg=1,
+#     seed=seed,
+#     workers=num_threads,
+#     size=num_feature,
+#     min_count=min_word_count,
+#     window=context_size,
+#     sample=down_sampling
+# )
 
-# Sauvegarde du model entrainer dans un fichier pour utilisation plus tard
-if not os.path.exists("trained"):
-    os.makedirs("trained")
+# # Generation de la liste de vocabulaire
+# documents2vec.build_vocab(phrases)
 
-documents2vec.save(os.path.join("trained", "documents2vec.w2v"))
+# print("Word2Vec vocab list length: " + str(len(documents2vec.wv.vocab)))
 
-print(documents2vec.wv.most_similar("transmission"))
+# # Entrainement du model en suivant la documentation de word2vec (en entete de main.py)
+# documents2vec.train(phrases, total_examples=1, epochs=1)
+
+# # Sauvegarde du model entrainer dans un fichier pour utilisation plus tard
+# if not os.path.exists("trained"):
+#     os.makedirs("trained")
+
+# documents2vec.save(os.path.join("trained", "documents2vec.w2v"))
+
+# requete = input("Recherche: ")
+
+# cosim = documents2vec.wv.relative_cosine_similarity(requete, 'application')
+
+# print(cosim)
+
+# ==================================================
+# Methode en Utilisant SKLearn
+# ==================================================
+
+# # Recuperation des documents dans le folder
+# documents = sorted(glob.glob("../documents_ift/*.txt"))
+# print(documents)
+
+# # Variable qui contient pour chaque nom de document son texte interieure
+# document_dictionary = {}
+
+# document_array = []
+
+# # df1 = pd.DataFrame(document_dictionary)
+
+# # Initialize
+# vectorizer = TfidfVectorizer()
+# doc_vec = vectorizer.fit_transform(document_array)
+
+# print(doc_vec)
+
+
+# # Create dataFrame
+# df2 = pd.DataFrame(doc_vec.toarray().transpose(),
+#                    index=vectorizer.get_feature_names())
+
+# # Change column headers
+# df2.columns = df1.columns
+# print(df2)

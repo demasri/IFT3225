@@ -1,0 +1,22 @@
+.search-engine {
+  margin: 0;
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+h1 {
+  text-align: center;
+}
+
+.no-result {
+  color: red;
+  text-align: center;
+  padding-top: 10px;
+}
+
+.list-group {
+  padding: 10px;
+}
